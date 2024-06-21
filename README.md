@@ -52,7 +52,9 @@ The development of the GAN prototype focused on generation of the mission TODs s
 
 ## References
 [1] Stever, S. L., et al. ‘Simulations of Systematic Effects Arising from Cosmic Rays in the LiteBIRD Space Telescope, and Effects on the Measurements of CMB B-Modes’. Journal of Cosmology and Astroparticle Physics, vol. 2021, no. 09, IOP Publishing, Sept. 2021, p. 013, https://doi.org10.1088/1475-7516/2021/09/013.
+
 [2] Tominaga, Mayu, et al. ‘Assessment of the Cosmic-Ray Impacts for LiteBIRD Using Geant4 Simulation’. Space Telescopes and Instrumentation 2022: Optical, Infrared, and Millimeter Wave, edited by Laura E. Coyle et al., vol. 12180, 2022, p. 1218054, https://doi.org10.1117/12.2629759. Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series.
+
 [3] Tominaga, Mayu, et al. ‘Simulation of the Cosmic Ray Effects for the LiteBIRD Satellite Observing the CMB B-Mode Polarization’. Millimeter, Submillimeter, and Far-Infrared Detectors and Instrumentation for Astronomy X, edited by Jonas Zmuidzinas and Jian-Rong Gao, SPIE, 2020, https://doi.org10.1117/12.2576127.
 
 ## Support
