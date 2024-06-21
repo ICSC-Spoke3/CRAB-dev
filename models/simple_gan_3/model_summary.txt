@@ -1,0 +1,72 @@
+Model: "Generator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 130)               13130     
+                                                                 
+ reshape (Reshape)           (None, 130, 1)            0         
+                                                                 
+ conv1d_transpose (Conv1DTr  (None, 130, 12)           144       
+ anspose)                                                        
+                                                                 
+ batch_normalization (Batch  (None, 130, 12)           48        
+ Normalization)                                                  
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 130, 12)           0         
+                                                                 
+ conv1d_transpose_1 (Conv1D  (None, 260, 6)            798       
+ Transpose)                                                      
+                                                                 
+ batch_normalization_1 (Bat  (None, 260, 6)            24        
+ chNormalization)                                                
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 260, 6)            0         
+                                                                 
+ conv1d_transpose_2 (Conv1D  (None, 1560, 1)           67        
+ Transpose)                                                      
+                                                                 
+=================================================================
+Total params: 14211 (55.51 KB)
+Trainable params: 14175 (55.37 KB)
+Non-trainable params: 36 (144.00 Byte)
+_________________________________________________________________
+Model: "Discriminator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 1560, 16)          192       
+                                                                 
+ leaky_re_lu_2 (LeakyReLU)   (None, 1560, 16)          0         
+                                                                 
+ dropout (Dropout)           (None, 1560, 16)          0         
+                                                                 
+ batch_normalization_2 (Bat  (None, 1560, 16)          64        
+ chNormalization)                                                
+                                                                 
+ conv1d_1 (Conv1D)           (None, 312, 16)           2832      
+                                                                 
+ leaky_re_lu_3 (LeakyReLU)   (None, 312, 16)           0         
+                                                                 
+ dropout_1 (Dropout)         (None, 312, 16)           0         
+                                                                 
+ batch_normalization_3 (Bat  (None, 312, 16)           64        
+ chNormalization)                                                
+                                                                 
+ conv1d_2 (Conv1D)           (None, 29, 8)             1416      
+                                                                 
+ leaky_re_lu_4 (LeakyReLU)   (None, 29, 8)             0         
+                                                                 
+ dropout_2 (Dropout)         (None, 29, 8)             0         
+                                                                 
+ batch_normalization_4 (Bat  (None, 29, 8)             32        
+ chNormalization)                                                
+                                                                 
+ flatten (Flatten)           (None, 232)               0         
+                                                                 
+ dense_1 (Dense)             (None, 1)                 233       
+                                                                 
+=================================================================
+Total params: 4833 (18.88 KB)
+Trainable params: 4753 (18.57 KB)
+Non-trainable params: 80 (320.00 Byte)
+_________________________________________________________________

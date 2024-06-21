@@ -1,0 +1,152 @@
+Model: "Empty_generator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_10 (Dense)            (None, 106)               10706     
+                                                                 
+ reshape_7 (Reshape)         (None, 106, 1)            0         
+                                                                 
+ conv1d_transpose_11 (Conv1  (None, 1060, 1)           11        
+ DTranspose)                                                     
+                                                                 
+=================================================================
+Total params: 10717 (41.86 KB)
+Trainable params: 0 (0.00 Byte)
+Non-trainable params: 10717 (41.86 KB)
+_________________________________________________________________
+Model: "Discriminator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d_16 (Conv1D)          (None, 1060, 8)           168       
+                                                                 
+ leaky_re_lu_27 (LeakyReLU)  (None, 1060, 8)           0         
+                                                                 
+ layer_normalization_8 (Lay  (None, 1060, 8)           16        
+ erNormalization)                                                
+                                                                 
+ conv1d_17 (Conv1D)          (None, 1060, 8)           648       
+                                                                 
+ leaky_re_lu_28 (LeakyReLU)  (None, 1060, 8)           0         
+                                                                 
+ layer_normalization_9 (Lay  (None, 1060, 8)           16        
+ erNormalization)                                                
+                                                                 
+ conv1d_18 (Conv1D)          (None, 530, 16)           1296      
+                                                                 
+ leaky_re_lu_29 (LeakyReLU)  (None, 530, 16)           0         
+                                                                 
+ layer_normalization_10 (La  (None, 530, 16)           32        
+ yerNormalization)                                               
+                                                                 
+ conv1d_19 (Conv1D)          (None, 106, 32)           5152      
+                                                                 
+ leaky_re_lu_30 (LeakyReLU)  (None, 106, 32)           0         
+                                                                 
+ layer_normalization_11 (La  (None, 106, 32)           64        
+ yerNormalization)                                               
+                                                                 
+ flatten_4 (Flatten)         (None, 3392)              0         
+                                                                 
+ dense_11 (Dense)            (None, 1)                 3393      
+                                                                 
+=================================================================
+Total params: 10785 (42.13 KB)
+Trainable params: 10785 (42.13 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "Generator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_12 (Dense)            (None, 265)               26765     
+                                                                 
+ leaky_re_lu_31 (LeakyReLU)  (None, 265)               0         
+                                                                 
+ reshape_8 (Reshape)         (None, 265, 1)            0         
+                                                                 
+ conv1d_transpose_12 (Conv1  (None, 265, 8)            88        
+ DTranspose)                                                     
+                                                                 
+ leaky_re_lu_32 (LeakyReLU)  (None, 265, 8)            0         
+                                                                 
+ batch_normalization_17 (Ba  (None, 265, 8)            32        
+ tchNormalization)                                               
+                                                                 
+ conv1d_transpose_13 (Conv1  (None, 530, 16)           1296      
+ DTranspose)                                                     
+                                                                 
+ leaky_re_lu_33 (LeakyReLU)  (None, 530, 16)           0         
+                                                                 
+ batch_normalization_18 (Ba  (None, 530, 16)           64        
+ tchNormalization)                                               
+                                                                 
+ conv1d_transpose_14 (Conv1  (None, 1060, 32)          5152      
+ DTranspose)                                                     
+                                                                 
+ leaky_re_lu_34 (LeakyReLU)  (None, 1060, 32)          0         
+                                                                 
+ batch_normalization_19 (Ba  (None, 1060, 32)          128       
+ tchNormalization)                                               
+                                                                 
+ separable_conv1d_3 (Separa  (None, 1060, 1)           353       
+ bleConv1D)                                                      
+                                                                 
+ reshape_9 (Reshape)         (None, 1060)              0         
+                                                                 
+ dense_13 (Dense)            (None, 1060)              1124660   
+                                                                 
+ leaky_re_lu_35 (LeakyReLU)  (None, 1060)              0         
+                                                                 
+ reshape_10 (Reshape)        (None, 1060, 1)           0         
+                                                                 
+ lambda_6 (Lambda)           (None, 1060, 1)           0         
+                                                                 
+ lambda_7 (Lambda)           (None, 1060, 1)           0         
+                                                                 
+=================================================================
+Total params: 1158538 (4.42 MB)
+Trainable params: 1158426 (4.42 MB)
+Non-trainable params: 112 (448.00 Byte)
+_________________________________________________________________
+Model: "Discriminator"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d_20 (Conv1D)          (None, 1060, 8)           168       
+                                                                 
+ leaky_re_lu_36 (LeakyReLU)  (None, 1060, 8)           0         
+                                                                 
+ layer_normalization_12 (La  (None, 1060, 8)           16        
+ yerNormalization)                                               
+                                                                 
+ conv1d_21 (Conv1D)          (None, 1060, 8)           648       
+                                                                 
+ leaky_re_lu_37 (LeakyReLU)  (None, 1060, 8)           0         
+                                                                 
+ layer_normalization_13 (La  (None, 1060, 8)           16        
+ yerNormalization)                                               
+                                                                 
+ conv1d_22 (Conv1D)          (None, 530, 16)           1296      
+                                                                 
+ leaky_re_lu_38 (LeakyReLU)  (None, 530, 16)           0         
+                                                                 
+ layer_normalization_14 (La  (None, 530, 16)           32        
+ yerNormalization)                                               
+                                                                 
+ conv1d_23 (Conv1D)          (None, 106, 32)           5152      
+                                                                 
+ leaky_re_lu_39 (LeakyReLU)  (None, 106, 32)           0         
+                                                                 
+ layer_normalization_15 (La  (None, 106, 32)           64        
+ yerNormalization)                                               
+                                                                 
+ flatten_5 (Flatten)         (None, 3392)              0         
+                                                                 
+ dense_14 (Dense)            (None, 1)                 3393      
+                                                                 
+=================================================================
+Total params: 10785 (42.13 KB)
+Trainable params: 10785 (42.13 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
