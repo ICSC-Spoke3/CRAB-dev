@@ -8,7 +8,7 @@ This project contains machine learning methods to the study of CR noise systemat
 
 ## License
 
-Distributed under the GNU Affero General Public License v3.0 License. See [LICENSE](https://github.com/ICSC-Spoke3/Cosmica-dev/blob/main/LICENSE) for more information.
+Distributed under the GNU Affero General Public License v3.0 License. See [LICENSE](https://github.com/ICSC-Spoke3/CRAB-dev/blob/main/LICENSE) for more information.
 
 ## Project folders
 
